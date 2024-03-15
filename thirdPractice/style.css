@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+header{
+    background: url("/Bitmap.svg") round;
+    width: 100%;
+    height: 811px;
+}
+
+body{
+    margin: 0;
+}
+
+.container-logo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 23px;
+    padding-bottom: 130px;
+}
+    
+.container-new{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 15%;
+}
+
+.textFI1{
+    font-family: Poppins;
+    font-size: 14px; 
+    font-style: normal; 
+    font-weight: 400; 
+    line-height: normal; 
+    margin: 0px 0px 22px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.textFI2{
+    font-family: Poppins;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 74px; 
+    margin: 0px 0px 24px 0px;
+    color: rgb(255, 255, 255);
+}
+
+
+.textFI3{
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0px 0px 45px 0px;
+    color: rgb(255, 255, 255);
+}
+.textFI4{
+    color: #FFD723;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+main.container-new{
+    padding: 154px;
+    margin-bottom: 76px;
+    margin-top: -55px;
+}
+
+.title-main {
+    color: #4D533C;
+    width: 607px;
+    font-family: Poppins;
+    font-size: 36px;
+}
+
+.subtitle1color-titte{
+    font-size: 24px;
+    font-family: Poppins;
+    color: #4D533C;
+    width: 200px;
+    font-weight: 5000;
+
+}
+
+.subtitle2color-titte{
+    font-family: Poppins;
+    font-size: 14px;
+    color: #21384299;
+    height: 104px;
+}
+
+.sub-link{ 
+    color: #21384299;
+    font-family: Poppins;
+    font-weight: bold;
+    text-decoration: underline;
+    opacity: 50%;
+}
+
+.sub-link1{
+    color: #FFD723;
+    font-family: Poppins;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ser{
+    width: 255px;
+    height: 309px;
+    display: flex;
+    flex-direction: column;
+}
+.ser a{
+    display: flex;
+}
+
+.comtainer-1{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.vsplivashka{
+    background-color: #FAFAFA;
+    width: 1275px;
+    height: 362px;
+    margin-bottom: -100px;
+    z-index: 1;
+    position: absolute;
+    margin-top: -160px;
+}
+.TextVS{
+    font-family: Poppins;
+    font-size: 60px;
+    color: #4D533C;
+    width: 822px;
+    height: 148px;
+    font-weight: bold;
+    margin: 0;
+}
+.txtboxVS{
+    width: 822px;
+    height: 270px;
+    padding: 50px 0px 70px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;  
+}
+.txtboxVS1{
+    color: #FFD723;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+    width: 190px;
+    height: 24px;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding-top: 301px;
+    background-color: #4F553D;
+    overflow: hidden;
+    padding-bottom: 30px;
+    box-shadow: 0px -5px 100px 0px rgba(0, 0, 0, 0.5)
+}
+
+footer hr {
+    color: #5D6544;
+    opacity: 20%;
+}
+
+footer p {
+    color: #B6C197;
+}
+
+.us {
+    display: flex;
+    height: 88px;
+    font-size: 16px;
+    line-height: 40px;
+    gap: 70px;
+    margin-bottom: 50px;
+}
+
+.us p:nth-child(even) {
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-us {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    gap: 110px;
+    justify-content: space-between;
+}
+
+.help {
+    display: flex;
+    gap: 100px;
+}
+
+.help p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.service-help {
+    display: flex;
+    gap: 70px;
+}
+
+.company-hr {
+    display: flex;
+    gap: 10px;
+}
+
+.help-block {
+    width: 160px;
+}
+
+.block-header {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    color: #fff;
+}
+
+.vertical {
+    height: 210px;
+    width: 1.3px;
+    background-color: #B6C197;
+    opacity: 20%;
+}
+.intouch {
+    width: 322px;
+}
+
+
+.intouch .block-header {
+    margin-bottom: 20px;
+}
+.us-email {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.us-icons {
+    display: flex;
+    gap: 11px;
+}
+.oval {
+    width: 33px;
+    height: 33px;
+    background-color: #444A34;
+    border-radius: 50%;
+}
+.down-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #B5C096;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: flex-end;
+}
