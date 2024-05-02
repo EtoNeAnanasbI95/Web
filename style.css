@@ -105,9 +105,14 @@ header {
     font-family: "PT Serif";
 }
 
-.b-Kate-Willems {
+.H1-alt {
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #C9A96E;
 }
 
 .H1 {
@@ -118,6 +123,10 @@ header {
     margin-bottom: 5px;
 }
 
+.H2-alt {
+    margin: 10px 52px 14px 52px;
+}
+
 .H2 {
     text-align: center;
     font-size: 14px;
@@ -125,6 +134,15 @@ header {
     font-weight: 400;
     font-style: italic;
     color: #B1B1B1;
+}
+
+.H3-alt {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: PT Serif;
+    font-weight: 400;
+    margin: 0 10px;
 }
 
 .H3 {
@@ -141,10 +159,7 @@ header {
 
 .b-a-link {
     font-family: "PT Serif";
-}
-
-.b-a-title-alt {
-
+    font-size: 12px;
 }
 
 footer {
@@ -275,4 +290,62 @@ a:hover {
 
 .By {
     color: #b4b4b4;
+}
+
+.b-a-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.filters-text {
+    margin: 15px 97px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    font-family: PT Serif;
+}
+
+.catalog-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 14px 0px;
+}
+
+.filter-title {
+    margin-bottom: 4px;
+}
+
+.filter-text {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #666666;
+    font-family: PT Serif;
+}
+
+.s-m-title {
+    margin: 15px 90px;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: PT Serif;
+    width: 91px;
+}
+
+.s-m-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 20px;
+    gap: 3px;
+}
+
+.s-m-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #F8F9FA;
 }
