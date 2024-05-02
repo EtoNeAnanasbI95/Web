@@ -90,12 +90,61 @@ header {
 
 .b-About {
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.b-a-title {
+    margin-bottom: 20px;
 }
 
 .b-about-author {
     text-align: center;
     margin: 15px 75px;
     font-family: "PT Serif";
+}
+
+.b-Kate-Willems {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.H1 {
+    text-align: center;
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.H2 {
+    text-align: center;
+    font-size: 14px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: italic;
+    color: #B1B1B1;
+}
+
+.H3 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 20px;
+    color: #666666;
+}
+
+.b-a-text-link {
+    margin: 15px 75px;
+}
+
+.b-a-link {
+    font-family: "PT Serif";
+}
+
+.b-a-title-alt {
+
 }
 
 footer {
