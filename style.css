@@ -12,6 +12,20 @@ header {
     margin: 34px 4%;
 }
 
+.b-main {
+    margin: 60px 375px 80px 375px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.b-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
+
+}
+
 footer {
     display: flex;
     flex-direction: column;
