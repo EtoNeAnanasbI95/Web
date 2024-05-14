@@ -25,7 +25,17 @@ header {
     grid-template-rows: repeat(7, auto);
     grid-gap: 30px;
     width: 100%;
+}
+
+.b-m-photo-container {
+    display: flex;
+    flex-direction: column;
     margin-right: 15%;
+    width: 100%;
+}
+
+.b-images img {
+    width: 100%;
 }
 
 .b-images {
@@ -88,8 +98,12 @@ header {
     background: transparent;
 }
 
+.box img {
+    width: 100%;
+}
+
 .b-About {
-    width: 45%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -103,6 +117,22 @@ header {
     text-align: center;
     margin: 15px 75px;
     font-family: "PT Serif";
+}
+
+.b-p-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    padding: 18px 25px;
+}
+
+.b-p-menu a {
+    transition: 0.3s;
+}
+
+.b-p-menu a:hover {
+    color: #A2A2A2;
 }
 
 .H1-alt {
@@ -301,7 +331,8 @@ a:hover {
 .filters-text {
     margin: 15px 97px;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 100%;
+    text-align: center;
     font-weight: 400;
     font-family: PT Serif;
 }
@@ -330,7 +361,9 @@ a:hover {
     font-size: 16px;
     line-height: 21px;
     font-family: PT Serif;
-    width: 91px;
+    width: 100%;
+    text-align: center;
+    line-height: 100%;
 }
 
 .s-m-box {
@@ -348,4 +381,45 @@ a:hover {
     flex-direction: column;
     gap: 6px;
     background-color: #F8F9FA;
+}
+
+.s-m-media p {
+    font-family: "PT Sans";
+    color: #b4b4b4;
+}
+
+.f-t-box {
+    margin-top: 20px;
+}
+
+.f-t-box-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.f-t-box-text p {
+    font-family: "PT Serif";
+    color: #666666;
+    font-size: 14px;
+    background-color: #F8F9FA;
+    padding: 6px 15px;
+}
+
+.b-d-images {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.b-d-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b-d-container p {
+    font-family: "PT Serif";
+    font-size: 24px;
+    margin-bottom: 40px;
 }
