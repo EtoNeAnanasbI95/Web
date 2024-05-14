@@ -115,7 +115,7 @@ header {
 
 .b-about-author {
     text-align: center;
-    margin: 15px 75px;
+    margin: 15px 0px;
     font-family: "PT Serif";
 }
 
@@ -154,7 +154,10 @@ header {
 }
 
 .H2-alt {
-    margin: 10px 52px 14px 52px;
+    margin: 10px 0px 14px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .H2 {
@@ -184,7 +187,9 @@ header {
 }
 
 .b-a-text-link {
-    margin: 15px 75px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .b-a-link {
@@ -329,7 +334,7 @@ a:hover {
 }
 
 .filters-text {
-    margin: 15px 97px;
+    margin: 15px 0px;
     font-size: 16px;
     line-height: 100%;
     text-align: center;
@@ -422,4 +427,29 @@ a:hover {
     font-family: "PT Serif";
     font-size: 24px;
     margin-bottom: 40px;
+}
+
+@media screen and (max-width: 980px) {
+    .b-d-images {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .b-About {
+        display: none;
+    }
+
+    .b-m-photo-container {
+        margin: 0;
+    }
+
+    .b-main {
+        margin-top: 60px;
+        margin-bottom: 80px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
