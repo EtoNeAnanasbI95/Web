@@ -34,6 +34,12 @@ header {
     width: 100%;
 }
 
+@media screen and (max-width: 1920px) {
+    .b-images img {
+        height: 110%;
+    }
+ }
+
 .b-images img {
     width: 100%;
 }
