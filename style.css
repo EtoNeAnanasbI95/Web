@@ -52,6 +52,27 @@ header {
     overflow: hidden;
 }
 
+.b-big-image .b-image-text {
+    line-height: 24px;
+    padding-left: 30px;
+    align-items: start;
+    top: 67%;
+}
+
+.b-big-image .b-image-text-title {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.b-image-trashtext {
+    color: #666666;
+    font-family: "PT Sans";
+    font-size: 14px;
+    text-align: left;
+    width: 614px;
+}
+
 .b-big-image {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -494,10 +515,26 @@ a:hover {
 
     .b-image-text-title {
         font-size: 32px;
+        width: 100%;
     }
 
     .b-image-text {
         height: 200%;
+        top: 60%;
+    }
+
+    .b-big-image .b-image-text {
+        gap: 15px;
+    }
+
+    .b-big-image .b-image-text .b-image-trashtext {
+        font-size: 24px;
+        width: 100%;
+        line-height: 40px;
+    }
+
+    .b-big-image .b-image-text {
+        top: 60%;
     }
 
     .b-About {
@@ -532,5 +569,9 @@ a:hover {
         display: flex;
         justify-content: center;
         align-content: center;
+    }
+
+    .b-d-container p {
+        font-size: 30px;
     }
 }
