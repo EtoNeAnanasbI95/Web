@@ -11,9 +11,49 @@
 .overlap {
     margin-left: -20px;
 }
-
 .overlap-container{
     display: flex;
     flex-wrap: nowrap !important;
     margin-left: -75px !important;
+}
+
+header {
+    padding: 10px !important;
+    background-color: #65b459;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+header h1 {
+    color: white;
+    text-decoration: none;
+}
+
+.margin-top {
+    margin-top: 5% !important;
+}
+
+hr {
+    opacity: 100 !important;
+    border: 2px solid #4e4c4a !important;
+}
+
+body {
+    background-color: #fbf5ee !important;
+}
+
+* {
+    transition: 0.3s;
+}
+
+button:hover {
+    color: white;
 }
