@@ -1,0 +1,19 @@
+.square-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.square-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlap {
+    margin-left: -20px;
+}
+
+.overlap-container{
+    display: flex;
+    flex-wrap: nowrap !important;
+    margin-left: -75px !important;
+}
