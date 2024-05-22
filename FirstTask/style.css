@@ -8,14 +8,6 @@
     height: 100%;
     object-fit: cover;
 }
-.overlap {
-    margin-left: -20px;
-}
-.overlap-container{
-    display: flex;
-    flex-wrap: nowrap !important;
-    margin-left: -75px !important;
-}
 
 header {
     padding: 10px !important;
@@ -56,4 +48,9 @@ body {
 
 button:hover {
     color: white;
+}
+.forest {
+    background: url("./src/forest.png") repeat center;
+    background-size: contain;
+    height: 200px;
 }
