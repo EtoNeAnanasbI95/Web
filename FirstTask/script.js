@@ -3,8 +3,8 @@ const cloneButtons = Array.from(document.getElementsByClassName("clone-btn"))
 
 cloneButtons.forEach((btn, index) => {
     btn.addEventListener("click", (e) => {
-        const cloneContainer = document.getElementsByClassName("clone-container");
-        cloneContainer[0].appendChild(cloneData[index].cloneNode(true));
+        const cloneContainer = document.getElementsByClassName('clone-container')
+        cloneContainer[index].appendChild(cloneData[index].cloneNode(true))
     })
 })
 
