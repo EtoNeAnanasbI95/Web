@@ -1,12 +1,5 @@
 const cloneData = Array.from(document.getElementsByClassName("clone-data"))
-const cloneButtons = Array.from(document.getElementsByClassName("clone-btn"))
-
-cloneButtons.forEach((btn, index) => {
-    btn.addEventListener("click", (e) => {
-        const cloneContainer = document.getElementsByClassName('clone-container')
-        cloneContainer[index].appendChild(cloneData[index].cloneNode(true))
-    })
-})
+Array.from(document.getElementsByClassName("clone-btn")).forEach((btn, index) => {btn.addEventListener("click", () => {cloneData[index].after(cloneData[index].cloneNode(true))})})
 
 document.getElementById('append-btn').addEventListener('click', (e) => {
     const horseContainer = document.getElementById("horse-container")
