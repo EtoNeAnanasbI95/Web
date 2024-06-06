@@ -1,0 +1,53 @@
+{
+    "tables": [
+        {
+            "from":"russian",
+            "material":"stone",
+            "price":"10000"
+        },
+        {
+            "from":"USA",
+            "materal":"dark wood",
+            "price":"1000"
+        },
+        {
+            "from":"swiss",
+            "material":"red wood",
+            "price":"50000"
+        }
+    ],
+    "cupboards": [
+        {
+            "from":"russian",
+            "material":"stone",
+            "price":"10000"
+        },
+        {
+            "from":"USA",
+            "material":"dark wood",
+            "price":"1000"
+        },
+        {
+            "from":"swiss",
+            "material":"red wood",
+            "price":"50000"
+        }
+    ],
+    "chairs": [
+        {
+            "from":"russian",
+            "material":"stone",
+            "price":"10000"
+        },
+        {
+            "from":"USA",
+            "material":"dark wood",
+            "price":"1000"
+        },
+        {
+            "from":"swiss",
+            "material":"red wood",
+            "price":"50000"
+        }
+    ]
+}
