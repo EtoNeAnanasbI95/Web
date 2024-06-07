@@ -1,19 +1,23 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
-const Item = (item) => {
+const Item = (props) => {
   return (
-    <div>
-        {
-          data.map((item) => {
-            return <>
-              <h2>{item.from}</h2>
-              <p>{item.material}</p>
-              <p>{item.price}</p>
-            </>
-          })
-        }
-      </div>
-  )
+    <Card style={{ width: '18rem' }}>
+      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+      <Card.Body>
+        <Card.Title>{props.from}</Card.Title>
+        <Card.Text>
+          {props.material}
+        </Card.Text>
+        <Card.Text>
+          {props.price}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+  );
 }
 
 export default Item 

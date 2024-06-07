@@ -5,8 +5,8 @@ const CartItem = (props) => {
   return (
     <div>
         {
-            props.Item.map(obj=> {
-                <Item
+            props.item.map(obj=> {
+                return <Item
                 key={obj.id} 
                 id={obj.id}
                 
