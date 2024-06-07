@@ -1,8 +1,18 @@
 import React from 'react'
 
-const Item = () => {
+const Item = (item) => {
   return (
-    <div>Item</div>
+    <div>
+        {
+          data.map((item) => {
+            return <>
+              <h2>{item.from}</h2>
+              <p>{item.material}</p>
+              <p>{item.price}</p>
+            </>
+          })
+        }
+      </div>
   )
 }
 
