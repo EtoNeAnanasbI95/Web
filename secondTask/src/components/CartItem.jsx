@@ -3,9 +3,11 @@ import Item from './Item'
 
 const CartItem = (props) => {
   return (
-    <div>
+    <>
+      <h1 style={{display: 'flex', justifyContent: 'center'} }>{props.direction}</h1>
+      <div className='Carts'>
         {
-            props.item.map(obj=> {
+            props.data.map(obj=> {
                 return <Item
                 key={obj.id} 
                 id={obj.id}
@@ -16,7 +18,8 @@ const CartItem = (props) => {
                 />
             })
         }
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -6,9 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const Item = (props) => {
   return (
     <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
-        <Card.Title>{props.from}</Card.Title>
+        <Card.Title>{props.direction}</Card.Title>
+        <Card.Text>
+          {props.from}
+        </Card.Text>
         <Card.Text>
           {props.material}
         </Card.Text>

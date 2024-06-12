@@ -7,7 +7,7 @@
         },
         {
             "from":"USA",
-            "materal":"dark wood",
+            "material":"dark wood",
             "price":"1000"
         },
         {
@@ -48,6 +48,17 @@
             "from":"swiss",
             "material":"red wood",
             "price":"50000"
+        }
+    ],
+    "overlay": [
+        {
+            "from":"table from russia"
+        },
+        {
+            "from":"table from swiss"
+        },
+        {
+            "from":"table from USA"
         }
     ]
 }
