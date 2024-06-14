@@ -2,8 +2,17 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { AppContexet } from '../App'
 
 const Item = (props) => {
+
+  const context = React.useContext(AppContexet)
+
+  const onClickAdd = () => {
+    const { id, from:from, material:material, price:price} = props
+    props.onPlus({id, from, material, price})
+  }
+
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -17,7 +26,12 @@ const Item = (props) => {
         <Card.Text>
           {props.price}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        {/* <Button variant="primary">Go somewhere</Button> */}
+        <Button onClick={onClickAdd}>
+          {
+            context.isAdded(props.id) ? "Добавлен" : "Добавить в корзину"
+          }
+        </Button>
       </Card.Body>
     </Card>
   );

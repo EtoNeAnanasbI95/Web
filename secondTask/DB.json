@@ -1,64 +1,30 @@
 {
-    "tables": [
-        {
-            "from":"russian",
-            "material":"stone",
-            "price":"10000"
-        },
-        {
-            "from":"USA",
-            "material":"dark wood",
-            "price":"1000"
-        },
-        {
-            "from":"swiss",
-            "material":"red wood",
-            "price":"50000"
-        }
-    ],
-    "cupboards": [
-        {
-            "from":"russian",
-            "material":"stone",
-            "price":"10000"
-        },
-        {
-            "from":"USA",
-            "material":"dark wood",
-            "price":"1000"
-        },
-        {
-            "from":"swiss",
-            "material":"red wood",
-            "price":"50000"
-        }
-    ],
-    "chairs": [
-        {
-            "from":"russian",
-            "material":"stone",
-            "price":"10000"
-        },
-        {
-            "from":"USA",
-            "material":"dark wood",
-            "price":"1000"
-        },
-        {
-            "from":"swiss",
-            "material":"red wood",
-            "price":"50000"
-        }
-    ],
-    "overlay": [
-        {
-            "from":"table from russia"
-        },
-        {
-            "from":"table from swiss"
-        },
-        {
-            "from":"table from USA"
-        }
-    ]
+  "tables": [
+    {
+      "id": 1,
+      "from": "russian",
+      "material": "stone",
+      "price": "10000"
+    },
+    {
+      "id": 2,
+      "from": "USA",
+      "material": "dark wood",
+      "price": "1000"
+    },
+    {
+      "id": 3,
+      "from": "swiss",
+      "material": "red wood",
+      "price": "50000"
+    }
+  ],
+  "basket": [
+    {
+      "id": 1,
+      "from": "russian",
+      "material": "stone",
+      "price": "10000"
+    }
+  ]
 }
