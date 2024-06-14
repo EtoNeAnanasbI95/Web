@@ -2,6 +2,7 @@ import React from 'react'
 import Item from './Item'
 import axios from 'axios'
 import { AppContexet } from '../App'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const CartItem = (props) => {
 
@@ -21,6 +22,7 @@ const CartItem = (props) => {
     }
   }
   console.log(props)
+  let total = ""
   return (
     <>
     {
@@ -30,6 +32,7 @@ const CartItem = (props) => {
           <div className='Carts'>
             {
               props.data.map(obj => {
+                total += obj.price
                 return (
                   <Item
                   key={obj.id} 
@@ -50,6 +53,9 @@ const CartItem = (props) => {
           </div>
         </div>
       )
+    }
+    {
+      props.direction == "Basket" ? <h2 style={{display: 'flex', justifyContent: 'center', 'margin-top': '10rem'}}>Total: {total}</h2> : ""
     }
     </>
   )
