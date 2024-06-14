@@ -1,19 +1,19 @@
 {
   "tables": [
     {
-      "id": 1,
+      "id": "1",
       "from": "russian",
       "material": "stone",
       "price": "10000"
     },
     {
-      "id": 2,
+      "id": "2",
       "from": "USA",
       "material": "dark wood",
       "price": "1000"
     },
     {
-      "id": 3,
+      "id": "3",
       "from": "swiss",
       "material": "red wood",
       "price": "50000"
@@ -21,10 +21,16 @@
   ],
   "basket": [
     {
-      "id": 1,
+      "id": "1",
       "from": "russian",
       "material": "stone",
       "price": "10000"
+    },
+    {
+      "id": "2",
+      "from": "USA",
+      "material": "dark wood",
+      "price": "1000"
     }
   ]
 }

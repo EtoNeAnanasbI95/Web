@@ -10,9 +10,7 @@ const CartItem = (props) => {
   const onAddBasket = (obj) => {
     try {
       if (context.basket.find(item => Number(item.id) === Number(obj.id))) {
-        console.log("go delete")
-        axios.delete(`http://localhost:3001/basket/${obj.id}`)
-        context.setBasket((basketItem) => basketItem.filter(item => Number(item.id) !== Number(obj.id)))
+        context.deleteFromBasket(obj)
       } else {
         console.log("go post")
         axios.post('http://localhost:3001/basket', obj)

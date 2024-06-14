@@ -34,7 +34,6 @@ function App() {
     getOverlay()
   }, [])
 
-
   const isAdded = (id) => {
     const res = basket.find((objIsAdded) => {
       return Number(objIsAdded.id) === Number(id);
@@ -44,6 +43,12 @@ function App() {
     return total;
   }
 
+  const deleteFromBasket = (obj) => {
+    console.log("go delete")
+    axios.delete(`http://localhost:3001/basket/${obj.id}`)
+    setBasket(() => basket.filter(item => Number(item.id) !== Number(obj.id)))
+  }
+
   return (
     <AppContexet.Provider
     value={{
@@ -51,7 +56,8 @@ function App() {
       setData,
       basket,
       setBasket,
-      isAdded
+      isAdded,
+      deleteFromBasket
     }}>
       <>
         <Header/>
