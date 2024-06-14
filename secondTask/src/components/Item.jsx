@@ -9,14 +9,14 @@ const Item = (props) => {
   const context = React.useContext(AppContexet)
 
   const onClickAdd = () => {
-    const { id, from:from, material:material, price:price} = props
-    props.onPlus({id, from, material, price})
+    const { id, name:name, from:from, material:material, price:price} = props
+    props.onPlus({id, name:name, from, material, price})
   }
 
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>{props.direction}</Card.Title>
+        <Card.Title>{props.name}</Card.Title>
         <Card.Text>
           {props.from}
         </Card.Text>
@@ -27,8 +27,9 @@ const Item = (props) => {
           {props.price}
         </Card.Text>
         {/* <Button variant="primary">Go somewhere</Button> */}
-        <Button onClick={onClickAdd}>
+        <Button variant={props.direction == "Basket" ? "danger" : "primary"} onClick={onClickAdd}>
           {
+            props.direction == "Basket" ? (context.isAdded(props.id) ? "Удалить" : "Добавить в корзину") :
             context.isAdded(props.id) ? "Добавлен" : "Добавить в корзину"
           }
         </Button>

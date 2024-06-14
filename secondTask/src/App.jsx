@@ -63,7 +63,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/home' element={<HomePage/>}/>
-          <Route path='/home/Cart' element={<CartItem direction='Table' data={data}/>}/>
+          <Route path='/home/Cart' element={<CartItem direction='Tables' data={data}/>}/>
           <Route path={'/home/overlay'} element={<CartItem direction='Basket' data={basket}/>}/>
         </Routes>
       </>

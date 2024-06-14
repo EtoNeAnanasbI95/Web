@@ -20,18 +20,24 @@ const CartItem = (props) => {
       alert(`Something went error ${Error}`)
     }
   }
-
+  console.log(props)
   return (
     <>
-      <h1 style={{display: 'flex', justifyContent: 'center'} }>{props.direction}</h1>
-      <div className='Carts'>
-        {
-            props.data.map(obj => {
+    {
+      props.direction === "Basket" && props.data.length == 0 ? <h1 style={{display: 'flex', justifyContent: 'center'}}> Basket is empty</h1> : (
+        <div>
+          <h1 style={{display: 'flex', justifyContent: 'center'}}>{props.direction}</h1>
+          <div className='Carts'>
+            {
+              props.data.map(obj => {
                 return (
                   <Item
                   key={obj.id} 
                   id={obj.id}
+
+                  direction={props.direction}
                   
+                  name={obj.name}
                   from={obj.from}
                   material={obj.material}
                   price={obj.price}
@@ -39,9 +45,12 @@ const CartItem = (props) => {
                   onPlus={(cartObj) => onAddBasket(cartObj)}
                   />
                 )
-            })
-        }
-      </div>
+              })
+            }
+          </div>
+        </div>
+      )
+    }
     </>
   )
 }
