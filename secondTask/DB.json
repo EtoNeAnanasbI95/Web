@@ -29,6 +29,13 @@
       "from": "USA",
       "material": "dark wood",
       "price": "1000"
+    },
+    {
+      "id": "1",
+      "name": "Table from russia",
+      "from": "russian",
+      "material": "stone",
+      "price": "10000"
     }
   ]
 }

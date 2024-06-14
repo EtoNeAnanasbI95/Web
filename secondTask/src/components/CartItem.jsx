@@ -22,7 +22,7 @@ const CartItem = (props) => {
     }
   }
   console.log(props)
-  let total = ""
+  let total = 0
   return (
     <>
     {
@@ -32,7 +32,7 @@ const CartItem = (props) => {
           <div className='Carts'>
             {
               props.data.map(obj => {
-                total += obj.price
+                total += Number(obj.price)
                 return (
                   <Item
                   key={obj.id} 
