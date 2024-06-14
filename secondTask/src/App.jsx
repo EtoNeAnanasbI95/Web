@@ -1,5 +1,4 @@
 import './App.css'
-import CartPage from './components/CartPage'
 import { Route, Routes } from 'react-router-dom'
 import Header from './components/header'
 import React, { useState, useEffect } from 'react'
@@ -12,6 +11,7 @@ export const AppContexet = React.createContext({})
 function App() {
   const [data, setData] = useState([])
   const [basket, setBasket] = useState([])
+  const [favourites, setFavourites] = useState([])
   
   useEffect(() => {
     const getData = async () => {
@@ -28,25 +28,41 @@ function App() {
         console.log("basket")
         console.log(res.data)
       })
-      .catch((error) => console.log(error))
-    }
+      .catch((error) => console.log(error))}
+      const getFavourites = async () => {
+        await axios.get("http://localhost:3001/favourites")
+      .then((res) => {
+        setFavourites(res.data)
+        console.log("favourites")
+        console.log(res.data)
+      })
+      .catch((error) => console.log(error))}
     getData()
     getOverlay()
+    getFavourites()
   }, [])
 
-  const isAdded = (id) => {
-    const res = basket.find((objIsAdded) => {
-      return Number(objIsAdded.id) === Number(id);
-    });
+  const isAdded = (id, direction) => {
+    console.log()
+    console.log("Go isAdded function, check is added to ", direction)
+    const res = direction == "favourites" ? (favourites.find((objIsAdded) => {
+      return Number(objIsAdded.id) === Number(id)
+    })) : (basket.find((objIsAdded) => {
+      return Number(objIsAdded.id) === Number(id)
+    }))
     let total = res ? true : false;
-    console.log("Добавлен?", total);
+    console.log("Is Added?", total);
     return total;
   }
 
-  const deleteFromBasket = (obj) => {
-    console.log("go delete")
-    axios.delete(`http://localhost:3001/basket/${obj.id}`)
-    setBasket(() => basket.filter(item => Number(item.id) !== Number(obj.id)))
+  const deleteFrom = (obj, direction) => {
+    console.log()
+    console.log("Go deleteFrom function, deleting from ", direction)
+    const curretnObj = direction == "favourites" ? favourites : basket
+    const curretnSetter = direction == "favourites" ? setFavourites : setBasket
+    console.log("go delete from", direction)
+    axios.delete(`http://localhost:3001/${direction}/${obj.id}`)
+    curretnSetter(() => curretnObj.filter(item => Number(item.id) !== Number(obj.id)))
   }
 
   return (
@@ -56,8 +72,10 @@ function App() {
       setData,
       basket,
       setBasket,
+      favourites,
+      setFavourites,
       isAdded,
-      deleteFromBasket
+      deleteFrom
     }}>
       <>
         <Header/>
@@ -65,6 +83,7 @@ function App() {
           <Route path='/home' element={<HomePage/>}/>
           <Route path='/home/Cart' element={<CartItem direction='Tables' data={data}/>}/>
           <Route path={'/home/overlay'} element={<CartItem direction='Basket' data={basket}/>}/>
+          <Route path={'/home/favourites'} element={<CartItem direction='Favourites' data={favourites}/>}/>
         </Routes>
       </>
     </AppContexet.Provider>

@@ -8,14 +8,20 @@ const CartItem = (props) => {
 
   const context = React.useContext(AppContexet)
 
-  const onAddBasket = (obj) => {
+  const onAdd = (obj, direction) => {
+    console.log()
+    console.log("onAdd hendler")
+    console.log("curr dir", direction)
+    console.log("cur obj", obj)
+    const currentObj = direction == "favourites" ? context.favourites : context.basket
+    const currentSetter = direction == "favourites" ? context.setFavourites : context.setBasket
     try {
-      if (context.basket.find(item => Number(item.id) === Number(obj.id))) {
-        context.deleteFromBasket(obj)
+      if (currentObj.find(item => Number(item.id) === Number(obj.id))) {
+        context.deleteFrom(obj, direction.toLowerCase())
       } else {
         console.log("go post")
-        axios.post('http://localhost:3001/basket', obj)
-        context.setBasket([...context.basket, obj])
+        axios.post(`http://localhost:3001/${direction.toLowerCase()}`, obj)
+        currentSetter([...currentObj, obj])
       }
     } catch (Error) {
       alert(`Something went error ${Error}`)
@@ -45,7 +51,7 @@ const CartItem = (props) => {
                   material={obj.material}
                   price={obj.price}
 
-                  onPlus={(cartObj) => onAddBasket(cartObj)}
+                  onPlus={onAdd}
                   />
                 )
               })

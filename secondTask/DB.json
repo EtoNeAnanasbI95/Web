@@ -24,18 +24,27 @@
   ],
   "basket": [
     {
-      "id": "2",
-      "name": "Table from USA",
-      "from": "USA",
-      "material": "dark wood",
-      "price": "1000"
-    },
-    {
       "id": "1",
       "name": "Table from russia",
       "from": "russian",
       "material": "stone",
       "price": "10000"
+    },
+    {
+      "id": "3",
+      "name": "Table from swiss",
+      "from": "swiss",
+      "material": "red wood",
+      "price": "50000"
+    }
+  ],
+  "favourites": [
+    {
+      "id": "3",
+      "name": "Table from swiss",
+      "from": "swiss",
+      "material": "red wood",
+      "price": "50000"
     }
   ]
 }

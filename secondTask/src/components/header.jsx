@@ -14,6 +14,7 @@ function Header() {
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/home/Cart">Cart</Nav.Link>
             <Nav.Link href="/home/overlay">Basket</Nav.Link>
+            <Nav.Link href="/home/favourites">Favourites</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
