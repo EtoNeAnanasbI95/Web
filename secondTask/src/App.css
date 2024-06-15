@@ -3,7 +3,8 @@
     justify-content: space-around;
 }
 
-.homePage {
-    display: flex;
-    justify-content: center;
+.homeName {
+    display: flex !important;
+    justify-content: center !important;
+    justify-items: center !important;
 }

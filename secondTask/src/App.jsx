@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import HomePage from './components/HomePage'
 import axios from 'axios'
 import CartItem from './components/CartItem'
+import Footer from './components/footer'
 
 export const AppContexet = React.createContext({})
 
@@ -77,15 +78,17 @@ function App() {
       isAdded,
       deleteFrom
     }}>
-      <>
+      <div>
         <Header/>
         <Routes>
           <Route path='/home' element={<HomePage/>}/>
           <Route path='/home/Cart' element={<CartItem direction='Tables' data={data}/>}/>
           <Route path={'/home/overlay'} element={<CartItem direction='Basket' data={basket}/>}/>
           <Route path={'/home/favourites'} element={<CartItem direction='Favourites' data={favourites}/>}/>
+          {/* <Route path={'/home/<О ТОВАРЕ>'} element={<CartItem direction='Favourites' data={favourites}/>}/> */}
         </Routes>
-      </>
+        <Footer />
+      </div>
     </AppContexet.Provider>
   )
 }
