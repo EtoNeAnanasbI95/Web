@@ -1,10 +1,10 @@
 .Carts {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .homeName {
-    display: flex !important;
-    justify-content: center !important;
-    justify-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  justify-items: center !important;
 }

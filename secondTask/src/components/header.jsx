@@ -1,7 +1,8 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import React from 'react'
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 
 function Header() {
   return (
