@@ -1,15 +1,16 @@
 import React from "react";
 import Item from "./Item";
 import axios from "axios";
+import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from "react";
 import { AppContexet } from "../App";
-import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const CartItem = (props) => {
   const [isChecked, setIsChecked] = useState(false);
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const context = React.useContext(AppContexet);
 
@@ -37,10 +38,11 @@ const CartItem = (props) => {
 
   const onCheck = (e) => setIsChecked(e.target.checked);
   const onSearch = (e) => setSearch(e.target.value);
+  const onSelectedCategory = (e) => setSelectedCategory(e.target.value);
 
   const filteredData = props.data.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
-  );
+  ).filter((item) => selectedCategory === "all" || selectedCategory === item.category);
 
   let total = 0;
 
@@ -60,6 +62,11 @@ const CartItem = (props) => {
             <InputGroup.Checkbox isChecked={isChecked} onChange={onCheck} />
             <Form.Control disabled={!isChecked} onChange={onSearch} placeholder="Search" />
           </InputGroup>
+          <Form.Select className="mb-3" onChange={onSelectedCategory}>
+            <option value="all">Selected category</option>
+            <option value="USA">USA</option>
+            <option value="Europe">Europe</option>
+          </Form.Select>
           <div className="Carts">
             {filteredData.map((obj) => {
               total =+ Number(obj.price);
