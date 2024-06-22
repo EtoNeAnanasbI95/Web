@@ -69,7 +69,7 @@ const Item = (props) => {
             </Button>
             <Card.Link onClick={onAboutClick} href="/home/AboutOf">About item</Card.Link>
           </>
-        ) : (
+        ) : ( (props.direction === undefined ? "" : (
           <>
             <Button
               variant={props.direction == "Basket" ? "danger" : "primary"}
@@ -80,10 +80,11 @@ const Item = (props) => {
                   ? "Delete"
                   : "Add to basket"
                 : context.isAdded(props.id)
-                ? "Добавлен"
-                : "Добавить в корзину"}
+                ? "Added"
+                : "Add to basket"}
             </Button>
           </>
+        ))
         )}
       </Card.Body>
     </Card>
