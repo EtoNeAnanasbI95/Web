@@ -28,6 +28,10 @@ const Item = (props) => {
     );
   };
 
+  const onAboutClick = (link) => {
+    context.setAboutItam(props.obj)
+  }
+
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
@@ -63,6 +67,7 @@ const Item = (props) => {
                 ? "Added to basket"
                 : "Add to basket"}
             </Button>
+            <Card.Link onClick={onAboutClick} href="/home/AboutOf">About item</Card.Link>
           </>
         ) : (
           <>

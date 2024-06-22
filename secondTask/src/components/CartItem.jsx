@@ -79,6 +79,7 @@ const CartItem = (props) => {
                   from={obj.from}
                   material={obj.material}
                   price={obj.price}
+                  obj={obj}
                   onPlus={onAdd}
                 />
               );

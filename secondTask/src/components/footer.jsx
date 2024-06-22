@@ -10,9 +10,6 @@ function Footer() {
           This a little final WEB project fow MPT and legendari proffessor
           Alexandra Kalinina, omg no way
         </Card.Text>
-        <a className="btn btn-primary" href="/home/">
-          Go home page bro
-        </a>
       </Card.Body>
       <Card.Footer className="text-muted">
         <span>
