@@ -67,6 +67,7 @@ const Item = (props) => {
                 ? "Added to basket"
                 : "Add to basket"}
             </Button>
+            <br />
             <Card.Link onClick={onAboutClick} href="/home/AboutOf">About item</Card.Link>
           </>
         ) : ( (props.direction === undefined ? "" : (

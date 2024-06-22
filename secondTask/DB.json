@@ -6,7 +6,8 @@
       "name": "Table from russia",
       "from": "russian",
       "material": "stone",
-      "price": "10000"
+      "price": "10000",
+      "description": "Great table form Russia"
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "name": "Table from USA",
       "from": "USA",
       "material": "dark wood",
-      "price": "1000"
+      "price": "1000",
+      "description": "Great table form USA"
     },
     {
       "id": "3",
@@ -22,7 +24,8 @@
       "name": "Table from swiss",
       "from": "swiss",
       "material": "red wood",
-      "price": "50000"
+      "price": "50000",
+      "description": "Great table form Swiss"
     }
   ],
   "basket": [

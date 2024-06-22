@@ -7,6 +7,7 @@ import axios from "axios";
 import CartItem from "./components/CartItem";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import AboutOfItem from "./components/AboutOfItem";
 
 export const AppContexet = React.createContext({});
 
@@ -14,6 +15,7 @@ function App() {
   const [data, setData] = useState([]);
   const [basket, setBasket] = useState([]);
   const [favourites, setFavourites] = useState([]);
+  const [aboutItem, setAboutItam] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -87,12 +89,14 @@ function App() {
         setFavourites,
         isAdded,
         deleteFrom,
+        aboutItem,
+        setAboutItam
       }}
     >
       <div>
         <Header />
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={<HomePage data={data}/>} />
           <Route
             path="/home/Cart"
             element={<CartItem direction="Tables" data={data} />}
@@ -105,7 +109,9 @@ function App() {
             path={"/home/favourites"}
             element={<CartItem direction="Favourites" data={favourites} />}
           />
-          {/* <Route path={'/home/<О ТОВАРЕ>'} element={<CartItem direction='Favourites' data={favourites}/>}/> */}
+          <Route 
+            path={'/home/AboutOf'} 
+            element={<AboutOfItem direction='About?' item={aboutItem}/>}/>
         </Routes>
         <Footer />
       </div>
