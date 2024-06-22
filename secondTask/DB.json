@@ -2,16 +2,16 @@
   "tables": [
     {
       "id": "1",
-      "category":"Europe",
-      "name": "Table from russia",
-      "from": "russian",
+      "category": "Europe",
+      "name": "Table from Russia",
+      "from": "Russian",
       "material": "stone",
       "price": "10000",
       "description": "Great table form Russia"
     },
     {
       "id": "2",
-      "category":"USA",
+      "category": "USA",
       "name": "Table from USA",
       "from": "USA",
       "material": "dark wood",
@@ -20,9 +20,9 @@
     },
     {
       "id": "3",
-      "category":"Europe",
-      "name": "Table from swiss",
-      "from": "swiss",
+      "category": "Europe",
+      "name": "Table from Swiss",
+      "from": "Swiss",
       "material": "red wood",
       "price": "50000",
       "description": "Great table form Swiss"
@@ -30,27 +30,34 @@
   ],
   "basket": [
     {
-      "id": "1",
-      "name": "Table from russia",
-      "from": "russian",
-      "material": "stone",
-      "price": "10000"
-    },
-    {
       "id": "3",
-      "name": "Table from swiss",
-      "from": "swiss",
+      "name": "Table from Swiss",
+      "from": "Swiss",
       "material": "red wood",
       "price": "50000"
+    },
+    {
+      "id": "1",
+      "name": "Table from Russia",
+      "from": "Russian",
+      "material": "stone",
+      "price": "10000"
     }
   ],
   "favourites": [
     {
       "id": "3",
-      "name": "Table from swiss",
-      "from": "swiss",
+      "name": "Table from Swiss",
+      "from": "Swiss",
       "material": "red wood",
       "price": "50000"
+    },
+    {
+      "id": "1",
+      "name": "Table from Russia",
+      "from": "Russian",
+      "material": "stone",
+      "price": "10000"
     }
   ]
 }

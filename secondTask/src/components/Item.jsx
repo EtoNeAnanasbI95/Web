@@ -3,8 +3,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AppContexet } from "../App";
+import { useNavigate } from 'react-router-dom';
 
 const Item = (props) => {
+  const navigate = useNavigate();
+
   const context = React.useContext(AppContexet);
 
   const onClickAdd = (button) => {
@@ -28,8 +31,12 @@ const Item = (props) => {
     );
   };
 
-  const onAboutClick = (link) => {
+  const onAboutClick = () => {
+    console.log("onAboutClickRun");
     context.setAboutItam(props.obj)
+    return (
+      navigate('/home/AboutOf')
+    )
   }
 
   return (
@@ -68,7 +75,7 @@ const Item = (props) => {
                 : "Add to basket"}
             </Button>
             <br />
-            <Card.Link onClick={onAboutClick} href="/home/AboutOf">About item</Card.Link>
+            <Button onClick={onAboutClick} variant="link">About of item</Button>
           </>
         ) : ( (props.direction === undefined ? "" : (
           <>
