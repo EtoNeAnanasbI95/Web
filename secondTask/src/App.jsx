@@ -67,6 +67,28 @@ function App() {
     return total;
   };
 
+  const onAdd = (obj, direction) => {
+    console.log();
+    console.log("onAdd hendler");
+    console.log("curr dir", direction);
+    console.log("cur obj", obj);
+    const currentObj =
+      direction == "favourites" ? favourites : basket;
+    const currentSetter =
+      direction == "favourites" ? setFavourites : setBasket;
+    try {
+      if (currentObj.find((item) => Number(item.id) === Number(obj.id))) {
+        deleteFrom(obj, direction.toLowerCase());
+      } else {
+        console.log("go post");
+        axios.post(`http://localhost:3001/${direction.toLowerCase()}`, obj);
+        currentSetter([...currentObj, obj]);
+      }
+    } catch (Error) {
+      alert(`Something went error ${Error}`);
+    }
+  };
+
   const deleteFrom = (obj, direction) => {
     console.log();
     console.log("Go deleteFrom function, deleting from ", direction);
@@ -92,12 +114,13 @@ function App() {
         deleteFrom,
         aboutItem,
         setAboutItam,
+        onAdd
       }}
     >
       <Header />
       <div className="content">
         <Routes>
-          <Route path="/home" element={<HomePage data={data} />} />
+          <Route path="/home" element={<HomePage data={data} direction="Tables" />} />
           <Route
             path="/home/Cart"
             element={<CartItem direction="Tables" data={data} />}

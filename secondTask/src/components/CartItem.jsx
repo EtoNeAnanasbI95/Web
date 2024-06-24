@@ -14,28 +14,6 @@ const CartItem = (props) => {
 
   const context = React.useContext(AppContexet);
 
-  const onAdd = (obj, direction) => {
-    console.log();
-    console.log("onAdd hendler");
-    console.log("curr dir", direction);
-    console.log("cur obj", obj);
-    const currentObj =
-      direction == "favourites" ? context.favourites : context.basket;
-    const currentSetter =
-      direction == "favourites" ? context.setFavourites : context.setBasket;
-    try {
-      if (currentObj.find((item) => Number(item.id) === Number(obj.id))) {
-        context.deleteFrom(obj, direction.toLowerCase());
-      } else {
-        console.log("go post");
-        axios.post(`http://localhost:3001/${direction.toLowerCase()}`, obj);
-        currentSetter([...currentObj, obj]);
-      }
-    } catch (Error) {
-      alert(`Something went error ${Error}`);
-    }
-  };
-
   const onCheck = (e) => setIsChecked(e.target.checked);
   const onSearch = (e) => setSearch(e.target.value);
   const onSelectedCategory = (e) => setSelectedCategory(e.target.value);
@@ -66,6 +44,9 @@ const CartItem = (props) => {
             <option value="all">Selected category</option>
             <option value="USA">USA</option>
             <option value="Europe">Europe</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Australia">Australia</option>
           </Form.Select>
           <div className="Carts">
             {filteredData.map((obj) => {
@@ -80,7 +61,7 @@ const CartItem = (props) => {
                   material={obj.material}
                   price={obj.price}
                   obj={obj}
-                  onPlus={onAdd}
+                  onPlus={context.onAdd}
                 />
               );
             })}

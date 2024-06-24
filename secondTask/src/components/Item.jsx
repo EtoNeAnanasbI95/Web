@@ -21,7 +21,7 @@ const Item = (props) => {
     } = props;
     console.log("OnButtonCLickRun");
     console.log(button.target.textContent);
-    props.onPlus(
+    context.onAdd(
       { id, name, from, material, price },
       button.target.textContent == "Add to favourites" ||
         button.target.textContent == "Remove from favourites" ||
