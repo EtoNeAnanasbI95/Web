@@ -50,7 +50,7 @@ const CartItem = (props) => {
   return (
     <>
       {props.direction === "Basket" && props.data.length == 0 ? (
-        <h1 style={{ display: "flex", justifyContent: "center" }}>
+        <h1 className="d-flex " style={{ justifyContent: "center" }}>
           Basket is empty
         </h1>
       ) : (

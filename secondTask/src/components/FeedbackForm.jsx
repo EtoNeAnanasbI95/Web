@@ -35,7 +35,7 @@ const FeedbackForm = () => {
             <label>Имя:</label>
             <Form.Control
               placeholder="Name"
-              {...register("name", { required: "Это поле обязательно" })}
+              {...register("name", { required: "This field is required" })}
             />
           </div>
           <div>
@@ -43,10 +43,10 @@ const FeedbackForm = () => {
             <Form.Control
               placeholder="example@mail.com"
               {...register("email", {
-                required: "Это поле обязательно",
+                required: "This field is required",
                 pattern: {
                   value: /^\S+@\S+$/i,
-                  message: "Неверный формат email",
+                  message: "Incorrect email format",
                 },
               })}
             />
@@ -56,10 +56,10 @@ const FeedbackForm = () => {
             <Form.Control
               as="textarea"
               aria-label="With textarea"
-              {...register("message", { required: "Это поле обязательно" })}
+              {...register("message", { required: "This field is required" })}
             />
           </div>
-          <Button className="mt-1" variant="primary" type="submit">Отправить</Button>
+          <Button className="mt-1" variant="primary" type="submit">Spend</Button>
         </form>
         {status && <p>{status}</p>}
       </Popover.Body>

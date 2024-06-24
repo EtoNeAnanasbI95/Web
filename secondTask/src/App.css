@@ -5,6 +5,7 @@
 .Carts {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .homeName {
@@ -18,6 +19,7 @@
 }
 
 .popup {
+  z-index: 2;
   position: fixed;
   bottom: var(--footer-height);
   top: 0;
@@ -49,5 +51,6 @@ html, body {
 }
 
 footer {
+  z-index: 1;
   flex-shrink: 0;
 }
