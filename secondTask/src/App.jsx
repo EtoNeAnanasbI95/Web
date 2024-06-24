@@ -8,6 +8,7 @@ import CartItem from "./components/CartItem";
 import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AboutOfItem from "./components/AboutOfItem";
+import FeedbackForm from "./components/FeedbackForm";
 
 export const AppContexet = React.createContext({});
 
@@ -90,13 +91,13 @@ function App() {
         isAdded,
         deleteFrom,
         aboutItem,
-        setAboutItam
+        setAboutItam,
       }}
     >
-      <div>
-        <Header />
+      <Header />
+      <div className="content">
         <Routes>
-          <Route path="/home" element={<HomePage data={data}/>} />
+          <Route path="/home" element={<HomePage data={data} />} />
           <Route
             path="/home/Cart"
             element={<CartItem direction="Tables" data={data} />}
@@ -109,12 +110,14 @@ function App() {
             path={"/home/favourites"}
             element={<CartItem direction="Favourites" data={favourites} />}
           />
-          <Route 
-            path={'/home/AboutOf'} 
-            element={<AboutOfItem direction='About?' item={aboutItem}/>}/>
+          <Route
+            path={"/home/AboutOf"}
+            element={<AboutOfItem direction="About?" item={aboutItem} />}
+          />
         </Routes>
-        <Footer />
       </div>
+      <FeedbackForm />
+      <Footer />
     </AppContexet.Provider>
   );
 }

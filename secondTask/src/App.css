@@ -1,3 +1,7 @@
+:root {
+  --footer-height: 240px;
+}
+
 .Carts {
   display: flex;
   justify-content: space-around;
@@ -7,4 +11,43 @@
   display: flex !important;
   justify-content: center !important;
   justify-items: center !important;
+}
+
+* {
+  transition: all 0.3s;
+}
+
+.popup {
+  position: fixed;
+  bottom: var(--footer-height);
+  top: 0;
+  left: 0;
+  right: 5%;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  pointer-events: none;
+}
+
+.popup-content {
+  pointer-events: auto;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
 }
