@@ -146,21 +146,21 @@ function App() {
       <Header />
       <div className="content">
         <Routes>
-          <Route path="/home" element={<HomePage data={data} direction="Tables" />} />
+          <Route path="/Web/home" element={<HomePage data={data} direction="Tables" />} />
           <Route
-            path="/home/Cart"
+            path="/Web/home/Cart"
             element={<CartItem direction="Tables" data={data} />}
           />
           <Route
-            path={"/home/overlay"}
+            path={"/Web/home/overlay"}
             element={<CartItem direction="Basket" data={basket} />}
           />
           <Route
-            path={"/home/favourites"}
+            path={"/Web/home/favourites"}
             element={<CartItem direction="Favourites" data={favourites} />}
           />
           <Route
-            path={"/home/AboutOf"}
+            path={"/Web/home/AboutOf"}
             element={<AboutOfItem direction="About?" item={aboutItem} />}
           />
         </Routes>

@@ -21,7 +21,7 @@ const FeedbackForm = () => {
 
     const onSubmit = (data, e) => {
         emailjs
-        .send("service_yg5uhhe", "template_lrow7na", data, "ym8qGhvR0ZhTxZrB0")
+        .send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, data, import.meta.env.VITE_USER_ID)
         .then((response) => {
             setStatus("Message sent successfully!");
             e.target.reset();

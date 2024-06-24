@@ -36,7 +36,7 @@ const Item = (props) => {
     console.log("onAboutClickRun");
     context.setAboutItam(props.obj)
     return (
-      navigate('/home/AboutOf')
+      navigate('/Web/home/AboutOf')
     )
   }
 
