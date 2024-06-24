@@ -7,6 +7,7 @@ const HomePage = (props) => {
   console.log("Home page props log");
   console.log(props);
   const items = props.data.slice(0, 10);
+  let delay = 0;
 
   return (
     <div className="text-center">
@@ -16,6 +17,7 @@ const HomePage = (props) => {
       <div className="Carts">
         {
           items.map((obj) => {
+            delay += 0.1;
             return (
               <Item
                 key={obj.id}
@@ -26,6 +28,7 @@ const HomePage = (props) => {
                 material={obj.material}
                 price={obj.price}
                 obj={obj}
+                delay={delay}
               />
             )
           })

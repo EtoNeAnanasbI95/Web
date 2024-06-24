@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AboutOfItem from "./components/AboutOfItem";
 import FeedbackForm from "./components/FeedbackForm";
+import { motion } from "framer-motion";
 
 export const AppContexet = React.createContext({});
 
@@ -50,6 +51,30 @@ function App() {
     getOverlay();
     getFavourites();
   }, []);
+
+  const animations = {
+    rest: {
+      scale: 1,
+    },
+    pressed: {
+      scale: 0.99,
+    },
+    popupHover: {
+      scale: 1.1,
+    },
+    popupPressed: {
+      scale: [2, 1, 1.2, 1.1],
+      transition: {
+        duration: 0.3,
+      },
+    },
+    bounce: {
+      scale: [1, 1.2, 0.9, 1.1, 1],
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
 
   const isAdded = (id, direction) => {
     console.log();
@@ -114,7 +139,8 @@ function App() {
         deleteFrom,
         aboutItem,
         setAboutItam,
-        onAdd
+        onAdd,
+        animations
       }}
     >
       <Header />

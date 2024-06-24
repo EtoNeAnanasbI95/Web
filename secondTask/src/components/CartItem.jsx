@@ -23,6 +23,7 @@ const CartItem = (props) => {
   ).filter((item) => selectedCategory === "all" || selectedCategory === item.category);
 
   let total = 0;
+  let delay = 0;
 
   console.log(props);
   return (
@@ -51,6 +52,7 @@ const CartItem = (props) => {
           <div className="Carts">
             {filteredData.map((obj) => {
               total =+ Number(obj.price);
+              delay += 0.1;
               return (
                 <Item
                   key={obj.id}
@@ -62,6 +64,7 @@ const CartItem = (props) => {
                   price={obj.price}
                   obj={obj}
                   onPlus={context.onAdd}
+                  delay={delay}
                 />
               );
             })}

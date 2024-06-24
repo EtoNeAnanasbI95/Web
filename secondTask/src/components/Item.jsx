@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AppContexet } from "../App";
 import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Item = (props) => {
   const navigate = useNavigate();
@@ -41,62 +42,76 @@ const Item = (props) => {
 
   return (
     <div className="mt-2">
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.from}</Card.Text>
-          <Card.Text>{props.material}</Card.Text>
-          <Card.Text>{props.price}</Card.Text>
-          {props.direction == "Tables" || props.direction == "Favourites" ? (
-            <>
-              <Button
-                className="mt-2"
-                variant={props.direction == "Favourites" ? "danger" : "primary"}
-                onClick={onClickAdd}
-              >
-                {props.direction == "Favourites"
-                  ? context.isAdded(props.id, "favourites")
-                    ? "Remove from favourites"
-                    : "Add to favourites"
-                  : context.isAdded(props.id, "favourites")
-                  ? "Added to favourites"
-                  : "Add to favourites"}
-              </Button>
-              <Button
-                className="mt-2"
-                variant={props.direction == "Basket" ? "danger" : "primary"}
-                onClick={onClickAdd}
-              >
-                {props.direction == "Basket"
-                  ? context.isAdded(props.id)
-                    ? "Delete"
-                    : "Add to basket"
-                  : context.isAdded(props.id)
-                  ? "Added to basket"
-                  : "Add to basket"}
-              </Button>
-              <br />
-              <Button onClick={onAboutClick} variant="link">About of item</Button>
-            </>
-          ) : ( (props.direction === undefined ? "" : (
-            <>
-              <Button
-                variant={props.direction == "Basket" ? "danger" : "primary"}
-                onClick={onClickAdd}
-              >
-                {props.direction == "Basket"
-                  ? context.isAdded(props.id)
-                    ? "Delete"
-                    : "Add to basket"
-                  : context.isAdded(props.id)
-                  ? "Added"
-                  : "Add to basket"}
-              </Button>
-            </>
-          ))
-          )}
-        </Card.Body>
-      </Card>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: props.delay  }}   
+      >
+        <Card style={{ width: "18rem" }}>
+          <Card.Body>
+            <Card.Title>{props.name}</Card.Title>
+            <Card.Text>{props.from}</Card.Text>
+            <Card.Text>{props.material}</Card.Text>
+            <Card.Text>{props.price}</Card.Text>
+            {props.direction == "Tables" || props.direction == "Favourites" ? (
+              <>
+                <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+                  <Button
+                    className="mt-2"
+                    variant={props.direction == "Favourites" ? "danger" : "primary"}
+                    onClick={onClickAdd}
+                  >
+                    {props.direction == "Favourites"
+                      ? context.isAdded(props.id, "favourites")
+                        ? "Remove from favourites"
+                        : "Add to favourites"
+                      : context.isAdded(props.id, "favourites")
+                      ? "Added to favourites"
+                      : "Add to favourites"}
+                  </Button>  
+                </motion.div>
+                <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+                  <Button
+                    className="mt-2"
+                    variant={props.direction == "Basket" ? "danger" : "primary"}
+                    onClick={onClickAdd}
+                  >
+                    {props.direction == "Basket"
+                      ? context.isAdded(props.id)
+                        ? "Delete"
+                        : "Add to basket"
+                      : context.isAdded(props.id)
+                      ? "Added to basket"
+                      : "Add to basket"}
+                  </Button>
+                </motion.div>
+                <br />
+                <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+                  <Button onClick={onAboutClick} variant="link">About of item</Button>
+                </motion.div>
+              </>
+            ) : ( (props.direction === undefined ? "" : (
+              <>
+                <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+                  <Button
+                    variant={props.direction == "Basket" ? "danger" : "primary"}
+                    onClick={onClickAdd}
+                  >
+                    {props.direction == "Basket"
+                      ? context.isAdded(props.id)
+                        ? "Delete"
+                        : "Add to basket"
+                      : context.isAdded(props.id)
+                      ? "Added"
+                      : "Add to basket"}
+                  </Button>
+                </motion.div>
+              </>
+            ))
+            )}
+          </Card.Body>
+        </Card>
+      </motion.div>
     </div>
   );
 };

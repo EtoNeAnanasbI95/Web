@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="mt-4">
       <Card className="text-center">
         <Card.Header >Contact and happy happy happy</Card.Header>
         <Card.Body>

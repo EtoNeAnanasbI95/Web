@@ -177,6 +177,13 @@
       "from": "USA",
       "material": "dark wood",
       "price": "1000"
+    },
+    {
+      "id": "3",
+      "name": "Table from Swiss",
+      "from": "Swiss",
+      "material": "red wood",
+      "price": "50000"
     }
   ]
 }

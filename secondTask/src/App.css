@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 240px;
+  --footer-height: 210px;
 }
 
 .Carts {
@@ -24,7 +24,8 @@
   bottom: var(--footer-height);
   top: 0;
   left: 0;
-  right: 5%;
+  right: 0;
+  margin-right: 5%;
   display: flex;
   justify-content: right;
   align-items: end;
@@ -53,4 +54,21 @@ html, body {
 footer {
   z-index: 1;
   flex-shrink: 0;
+}
+
+.round-button {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 5px solid #219230;
+  background-color: #3fc445;
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+.round-button:hover {
+  background-color: #339e39;
 }

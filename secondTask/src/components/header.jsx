@@ -5,9 +5,9 @@ import React from "react";
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary ">
+    <Navbar expand="lg" bg="primary" data-bs-theme="dark" >
       <Container>
-        <Navbar.Brand href="/home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/home">NotPineapple shop</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

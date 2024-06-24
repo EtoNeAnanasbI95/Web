@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { AppContexet } from "../App";
+import { motion } from 'framer-motion';
 
 const AboutOfItem = (props) => {
 
@@ -30,45 +31,54 @@ const AboutOfItem = (props) => {
   };
 
   return (
-    <Container className='my-5'>
-      <h1>About of item</h1>
-      <Card >
-        <Card.Img variant="top" className='card-image'  src={props.item.image} />
-        <Card.Body>
-          <Card.Title>{props.item.name}</Card.Title>
-          <Card.Text>
-            {props.item.description}
-          </Card.Text>
-          {/* <Button variant="primary">Go somewhere</Button> */}
-          <div className='d-flex justify-content-between mt-2'>
-            <Button
-              variant="primary"
-              onClick={onClickAdd}
-            >
-              {props.direction == "Favourites"
-                ? context.isAdded(props.item.id, "favourites")
-                  ? "Remove from favourites"
-                  : "Add to favourites"
-                : context.isAdded(props.item.id, "favourites")
-                ? "Added to favourites"
-                : "Add to favourites"}
-            </Button>
-            <Button
-              variant="primary"
-              onClick={onClickAdd}
-            >
-              {props.direction == "Basket"
-                ? context.isAdded(props.item.id)
-                  ? "Delete"
-                  : "Add to basket"
-                : context.isAdded(props.item.id)
-                ? "Added to basket"
-                : "Add to basket"}
-            </Button>
-          </div>
-        </Card.Body>
-      </Card>
-    </Container>
+    <motion.div 
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: props.delay  }}>
+      <Container className='my-5'>
+        <h1>About of item</h1>
+        <Card >
+          <Card.Img variant="top" className='card-image'  src={props.item.image} />
+          <Card.Body>
+            <Card.Title>{props.item.name}</Card.Title>
+            <Card.Text>
+              {props.item.description}
+            </Card.Text>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+            <div className='d-flex justify-content-between mt-2'>
+            <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+              <Button
+                variant="primary"
+                onClick={onClickAdd}
+              >
+                {props.direction == "Favourites"
+                  ? context.isAdded(props.item.id, "favourites")
+                    ? "Remove from favourites"
+                    : "Add to favourites"
+                  : context.isAdded(props.item.id, "favourites")
+                  ? "Added to favourites"
+                  : "Add to favourites"}
+              </Button>
+            </motion.div>
+            <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
+              <Button
+                variant="primary"
+                onClick={onClickAdd}
+              >
+                {props.direction == "Basket"
+                  ? context.isAdded(props.item.id)
+                    ? "Delete"
+                    : "Add to basket"
+                  : context.isAdded(props.item.id)
+                  ? "Added to basket"
+                  : "Add to basket"}
+              </Button>
+            </motion.div>
+            </div>
+          </Card.Body>
+        </Card>
+      </Container>
+    </motion.div>
   )
 }
 
