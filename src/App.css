@@ -1,0 +1,74 @@
+:root {
+  --footer-height: 210px;
+}
+
+.Carts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.homeName {
+  display: flex !important;
+  justify-content: center !important;
+  justify-items: center !important;
+}
+
+* {
+  transition: all 0.3s;
+}
+
+.popup {
+  z-index: 2;
+  position: fixed;
+  bottom: var(--footer-height);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-right: 5%;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  pointer-events: none;
+}
+
+.popup-content {
+  pointer-events: auto;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.round-button {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 5px solid #219230;
+  background-color: #3fc445;
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+  cursor: pointer;
+}
+
+.round-button:hover {
+  background-color: #339e39;
+}

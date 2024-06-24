@@ -1,0 +1,189 @@
+{
+  "tables": [
+    {
+      "id": "1",
+      "category": "Europe",
+      "name": "Table from Russia",
+      "from": "Russian",
+      "material": "stone",
+      "price": "10000",
+      "description": "Great table form Russia",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-adils-desk-gray-turquoise-black__1214042_pe911473_s5.jpg"
+    },
+    {
+      "id": "2",
+      "category": "USA",
+      "name": "Table from USA",
+      "from": "USA",
+      "material": "dark wood",
+      "price": "1000",
+      "description": "Great table form USA",
+      "image": "https://www.ikea.com/us/en/images/products/melltorp-table-white__0737267_pe740965_s5.jpg"
+    },
+    {
+      "id": "3",
+      "category": "Europe",
+      "name": "Table from Swiss",
+      "from": "Swiss",
+      "material": "red wood",
+      "price": "50000",
+      "description": "Great table form Swiss",
+      "image": "https://www.ikea.com/us/en/images/products/lack-coffee-table-black-brown__57540_pe163122_s5.jpg"
+    },
+    {
+      "id": "4",
+      "category": "Europe",
+      "name": "Table from Germany",
+      "from": "Germany",
+      "material": "beech wood",
+      "price": "11000",
+      "description": "Great table from Germany",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-adils-desk-gray-turquoise-black__1207251_pe907865_s5.jpg"
+    },
+    {
+      "id": "5",
+      "category": "Europe",
+      "name": "Table from Spain",
+      "from": "Spain",
+      "material": "pine wood",
+      "price": "6000",
+      "description": "Great table from Spain",
+      "image": "https://www.ikea.com/us/en/images/products/lack-side-table-black-brown__57544_pe163126_s5.jpg"
+    },
+    {
+      "id": "6",
+      "category": "Europe",
+      "name": "Table from UK",
+      "from": "UK",
+      "material": "walnut wood",
+      "price": "13000",
+      "description": "Great table from UK",
+      "image": "https://www.ikea.com/us/en/images/products/sandsberg-table-black__1074348_pe856162_s5.jpg"
+    },
+    {
+      "id": "7",
+      "category": "Asia",
+      "name": "Table from China",
+      "from": "China",
+      "material": "bamboo",
+      "price": "2000",
+      "description": "Great table from China",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-mittback-desk-white-anthracite-birch__1184942_pe898171_s5.jpg"
+    },
+    {
+      "id": "8",
+      "category": "Asia",
+      "name": "Table from Japan",
+      "from": "Japan",
+      "material": "cherry wood",
+      "price": "3000",
+      "description": "Great table from Japan",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-tillslag-desk-white-anthracite-green__1184940_pe898169_s5.jpg"
+    },
+    {
+      "id": "9",
+      "category": "Europe",
+      "name": "Table from Italy",
+      "from": "Italy",
+      "material": "marble",
+      "price": "15000",
+      "description": "Great table from Italy",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-alex-desk-gray-turquoise-black__1207277_pe907878_s5.jpg"
+    },
+    {
+      "id": "10",
+      "category": "Europe",
+      "name": "Table from France",
+      "from": "France",
+      "material": "oak wood",
+      "price": "12000",
+      "description": "Great table from France",
+      "image": "https://www.ikea.com/us/en/images/products/lack-console-table-white-stained-oak__1258135_pe926258_s5.jpg"
+    },
+    {
+      "id": "11",
+      "category": "Africa",
+      "name": "Table from Kenya",
+      "from": "Kenya",
+      "material": "mahogany",
+      "price": "8000",
+      "description": "Great table from Kenya",
+      "image": "https://www.ikea.com/us/en/images/products/lagkapten-alex-desk-gray-turquoise-black__1207259_pe907873_s5.jpg"
+    },
+    {
+      "id": "12",
+      "category": "USA",
+      "name": "Table from Brazil",
+      "from": "Brazil",
+      "material": "teak wood",
+      "price": "7000",
+      "description": "Great table from Brazil",
+      "image": "https://www.ikea.com/us/en/images/products/bjoerkasen-laptop-stand-beige__0955982_pe804391_s5.jpg"
+    },
+    {
+      "id": "13",
+      "category": "Australia",
+      "name": "Table from Australia",
+      "from": "Australia",
+      "material": "jarrah wood",
+      "price": "9000",
+      "description": "Great table from Australia",
+      "image": "https://www.ikea.com/us/en/images/products/pinntorp-table-light-brown-stained-white-stained__1118113_pe872934_s5.jpg"
+    },
+    {
+      "id": "14",
+      "category": "Europe",
+      "name": "Table from Netherlands",
+      "from": "Netherlands",
+      "material": "elm wood",
+      "price": "14000",
+      "description": "Great table from Netherlands",
+      "image": "https://www.ikea.com/us/en/images/products/pinntorp-table-light-brown-stained-white-stained__1118109_pe872932_s5.jpg"
+    },
+    {
+      "id": "15",
+      "category": "Europe",
+      "name": "Table from Sweden",
+      "from": "Sweden",
+      "material": "birch wood",
+      "price": "7000",
+      "description": "Great table from Sweden",
+      "image": ""
+    },
+    {
+      "id": "16",
+      "category": "Europe",
+      "name": "Table from Norway",
+      "from": "Norway",
+      "material": "spruce wood",
+      "price": "8000",
+      "description": "Great table from Norway",
+      "image": ""
+    }
+  ],
+  "basket": [
+    {
+      "id": "2",
+      "name": "Table from USA",
+      "from": "USA",
+      "material": "dark wood",
+      "price": "1000"
+    }
+  ],
+  "favourites": [
+    {
+      "id": "2",
+      "name": "Table from USA",
+      "from": "USA",
+      "material": "dark wood",
+      "price": "1000"
+    },
+    {
+      "id": "3",
+      "name": "Table from Swiss",
+      "from": "Swiss",
+      "material": "red wood",
+      "price": "50000"
+    }
+  ]
+}
