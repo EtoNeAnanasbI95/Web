@@ -20,7 +20,7 @@ function App() {
   const [aboutItem, setAboutItam] = useState([]);
 
   const api = axios.create({
-    baseURL: 'http://194.28.225.8:5000',
+    baseURL: 'http://localhost:5000',
     insecure: true
   })
 
