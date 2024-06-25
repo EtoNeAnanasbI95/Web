@@ -19,17 +19,22 @@ function App() {
   const [favourites, setFavourites] = useState([]);
   const [aboutItem, setAboutItam] = useState([]);
 
+  const api = axios.create({
+    baseURL: 'http://194.28.225.8:5000',
+    insecure: true
+  })
+
   useEffect(() => {
     const getData = async () => {
-      await axios.get("http://194.28.225.8:5000/tables").then((res) => {
+      await api.get("/tables").then((res) => {
         setData(res.data);
         console.log("data");
         console.log(res.data);
       });
     };
     const getOverlay = async () => {
-      await axios
-        .get("http://194.28.225.8:5000/basket")
+      await api
+        .get("/basket")
         .then((res) => {
           setBasket(res.data);
           console.log("basket");
@@ -38,8 +43,8 @@ function App() {
         .catch((error) => console.log(error));
     };
     const getFavourites = async () => {
-      await axios
-        .get("http://194.28.225.8:5000/favourites")
+      await api
+        .get("/favourites")
         .then((res) => {
           setFavourites(res.data);
           console.log("favourites");
