@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes, redirect } from "react-router-dom";
+import { Route, Routes  } from "react-router-dom";
 import Header from "./components/header";
 import React, { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
@@ -9,8 +9,6 @@ import Footer from "./components/footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AboutOfItem from "./components/AboutOfItem";
 import FeedbackForm from "./components/FeedbackForm";
-import { motion } from "framer-motion";
-import Redirect from "./components/Redirect";
 
 export const AppContexet = React.createContext({});
 
