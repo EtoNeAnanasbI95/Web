@@ -7,14 +7,14 @@ function Header() {
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark" >
       <Container>
-        <Navbar.Brand href="/Web/home">NotPineapple shop</Navbar.Brand>
+        <Navbar.Brand href="/Web/">NotPineapple shop</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/Web/home">Home</Nav.Link>
-            <Nav.Link href="/Web/home/Cart">Сatalog</Nav.Link>
-            <Nav.Link href="/Web/home/favourites">Favourites</Nav.Link>
-            <Nav.Link href="/Web/home/overlay">Basket</Nav.Link>
+            <Nav.Link href="/Web/">Home</Nav.Link>
+            <Nav.Link href="/Web/Cart">Сatalog</Nav.Link>
+            <Nav.Link href="/Web/favourites">Favourites</Nav.Link>
+            <Nav.Link href="/Web/overlay">Basket</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
