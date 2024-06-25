@@ -57,7 +57,7 @@ jobs:
         run: npm i json-server -g
 
       - name: Run json-server
-        run: json-server --watch ./dist/DB.json --port 3001
+        run: json-server --watch ./dist/DB.json --port 3001 &
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
