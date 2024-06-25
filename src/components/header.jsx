@@ -12,9 +12,9 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/Web/">Home</Nav.Link>
-            <Nav.Link href="/Web/Cart">Сatalog</Nav.Link>
-            <Nav.Link href="/Web/favourites">Favourites</Nav.Link>
-            <Nav.Link href="/Web/overlay">Basket</Nav.Link>
+            <Nav.Link href="/Web/Cart/">Сatalog</Nav.Link>
+            <Nav.Link href="/Web/favourites/">Favourites</Nav.Link>
+            <Nav.Link href="/Web/overlay/">Basket</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
