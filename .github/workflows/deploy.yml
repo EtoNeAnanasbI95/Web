@@ -47,6 +47,9 @@ jobs:
         with:
           node-version: 22
 
+      - name: List server files
+        run: ls 
+
       - name: Setup json-server
         run: npm i json-server -g
 
