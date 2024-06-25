@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      await axios.get("http://localhost:3001/tables").then((res) => {
+      await axios.get("http://194.28.225.8:5000/tables").then((res) => {
         setData(res.data);
         console.log("data");
         console.log(res.data);
@@ -29,7 +29,7 @@ function App() {
     };
     const getOverlay = async () => {
       await axios
-        .get("http://localhost:3001/basket")
+        .get("http://194.28.225.8:5000/basket")
         .then((res) => {
           setBasket(res.data);
           console.log("basket");
@@ -39,7 +39,7 @@ function App() {
     };
     const getFavourites = async () => {
       await axios
-        .get("http://localhost:3001/favourites")
+        .get("http://194.28.225.8:5000/favourites")
         .then((res) => {
           setFavourites(res.data);
           console.log("favourites");
@@ -106,7 +106,7 @@ function App() {
         deleteFrom(obj, direction.toLowerCase());
       } else {
         console.log("go post");
-        axios.post(`http://localhost:3001/${direction.toLowerCase()}`, obj);
+        axios.post(`http://194.28.225.8:5000/${direction.toLowerCase()}`, obj);
         currentSetter([...currentObj, obj]);
       }
     } catch (Error) {
@@ -120,7 +120,7 @@ function App() {
     const curretnObj = direction == "favourites" ? favourites : basket;
     const curretnSetter = direction == "favourites" ? setFavourites : setBasket;
     console.log("go delete from", direction);
-    axios.delete(`http://localhost:3001/${direction}/${obj.id}`);
+    axios.delete(`http://194.28.225.8:5000/${direction}/${obj.id}`);
     curretnSetter(() =>
       curretnObj.filter((item) => Number(item.id) !== Number(obj.id))
     );

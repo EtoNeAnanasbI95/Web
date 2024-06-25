@@ -48,17 +48,6 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 22
-
-      - name: Setup json-server
-        run: npm i json-server -g
-
-      - name: Run json-server
-        run: json-server --watch ./dist/DB.json --port 3001 &
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
