@@ -42,6 +42,17 @@ jobs:
     if: github.ref == 'refs/heads/DeployBranch'
 
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 22
+
+      - name: Setup json-server
+        run: npm i json-server -g
+
+      - name: Run json-server
+        run: json-server --watch .\\DB.json --port 3001
+
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
