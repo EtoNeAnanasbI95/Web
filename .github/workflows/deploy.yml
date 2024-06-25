@@ -51,7 +51,7 @@ jobs:
         run: npm i json-server -g
 
       - name: Run json-server
-        run: json-server --watch .\\DB.json --port 3001
+        run: json-server --watch ./dist/DB.json --port 3001
 
       - name: Download artifact
         uses: actions/download-artifact@v2
