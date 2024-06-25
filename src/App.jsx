@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, redirect } from "react-router-dom";
 import Header from "./components/header";
 import React, { useState, useEffect } from "react";
 import HomePage from "./components/HomePage";
@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AboutOfItem from "./components/AboutOfItem";
 import FeedbackForm from "./components/FeedbackForm";
 import { motion } from "framer-motion";
+import Redirect from "./components/Redirect";
 
 export const AppContexet = React.createContext({});
 
@@ -151,21 +152,21 @@ function App() {
       <Header />
       <div className="content">
         <Routes>
-          <Route path="/Web/" element={<HomePage data={data} direction="Tables" />} />
+          <Route path="/" element={<HomePage data={data} direction="Tables" />} />
           <Route
-            path="/Web/Cart"
+            path="/Cart"
             element={<CartItem direction="Tables" data={data} />}
           />
           <Route
-            path={"/Web/overlay"}
+            path={"/overlay"}
             element={<CartItem direction="Basket" data={basket} />}
           />
           <Route
-            path={"/Web/favourites"}
+            path={"/favourites"}
             element={<CartItem direction="Favourites" data={favourites} />}
           />
           <Route
-            path={"/Web/AboutOf"}
+            path={"/AboutOf"}
             element={<AboutOfItem direction="About?" item={aboutItem} />}
           />
         </Routes>
