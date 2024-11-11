@@ -19,7 +19,7 @@ function App() {
   const [aboutItem, setAboutItam] = useState([]);
 
   const api = axios.create({
-    baseURL: 'http://93.183.69.250:3000',
+    baseURL: 'https://sbgsrnr.zapto.org/',
     insecure: true
   })
 
@@ -110,7 +110,7 @@ function App() {
         deleteFrom(obj, direction.toLowerCase());
       } else {
         console.log("go post");
-        axios.post(`http://93.183.69.250:300/${direction.toLowerCase()}`, obj);
+        axios.post(`https://sbgsrnr.zapto.org/${direction.toLowerCase()}`, obj);
         currentSetter([...currentObj, obj]);
       }
     } catch (Error) {
@@ -124,7 +124,7 @@ function App() {
     const curretnObj = direction == "favourites" ? favourites : basket;
     const curretnSetter = direction == "favourites" ? setFavourites : setBasket;
     console.log("go delete from", direction);
-    axios.delete(`http://93.183.69.250:300/${direction}/${obj.id}`);
+    axios.delete(`https://sbgsrnr.zapto.org//${direction}/${obj.id}`);
     curretnSetter(() =>
       curretnObj.filter((item) => Number(item.id) !== Number(obj.id))
     );
