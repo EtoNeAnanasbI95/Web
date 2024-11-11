@@ -8,11 +8,11 @@ env:
   VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
   VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
   VITE_USER_ID: ${{ secrets.VITE_USER_ID }}
+  VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
   
 jobs:
   build:
     name: Build
-    runs-on: self-host
 
     steps:
       - name: Checkout repo
@@ -35,23 +35,20 @@ jobs:
           name: production-files
           path: ./dist
 
-      
+  deploy:
+    name: Deploy
+    needs: build
+    if: github.ref == 'refs/heads/main'
 
-  # deploy:
-  #   name: Deploy
-  #   needs: build
-  #   runs-on: self-host
-  #   if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./dist
 
-  #   steps:
-  #     - name: Download artifact
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: production-files
-  #         path: ./dist
-
-  #     - name: Deploy to GitHub Pages
-  #       uses: peaceiris/actions-gh-pages@v3
-  #       with:
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #         publish_dir: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.VITE_GITHUB_TOKEN }}
+          publish_dir: ./dist
