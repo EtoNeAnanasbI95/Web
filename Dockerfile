@@ -4,7 +4,7 @@ LABEL authors="eto_ne_ananasbi95"
 WORKDIR /json-server
 COPY ./public/DB.json ./DB.json
 
-RUN npm i  -G json-server
+RUN npm i -G json-server
 
 EXPOSE 3000:3000
 
