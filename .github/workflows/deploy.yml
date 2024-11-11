@@ -13,6 +13,7 @@ env:
 jobs:
   build:
     name: Build
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
@@ -39,6 +40,7 @@ jobs:
     name: Deploy
     needs: build
     if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
 
     steps:
       - name: Download artifact
