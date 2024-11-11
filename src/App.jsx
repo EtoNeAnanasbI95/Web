@@ -110,7 +110,7 @@ function App() {
         deleteFrom(obj, direction.toLowerCase());
       } else {
         console.log("go post");
-        axios.post(`http://194.28.225.8:5000/${direction.toLowerCase()}`, obj);
+        axios.post(`http://93.183.69.250:300/${direction.toLowerCase()}`, obj);
         currentSetter([...currentObj, obj]);
       }
     } catch (Error) {
@@ -124,7 +124,7 @@ function App() {
     const curretnObj = direction == "favourites" ? favourites : basket;
     const curretnSetter = direction == "favourites" ? setFavourites : setBasket;
     console.log("go delete from", direction);
-    axios.delete(`http://194.28.225.8:5000/${direction}/${obj.id}`);
+    axios.delete(`http://93.183.69.250:300/${direction}/${obj.id}`);
     curretnSetter(() =>
       curretnObj.filter((item) => Number(item.id) !== Number(obj.id))
     );
