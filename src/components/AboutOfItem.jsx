@@ -10,7 +10,6 @@ const AboutOfItem = (props) => {
   const context = React.useContext(AppContexet);
 
   const onClickAdd = (button) => {
-    console.log();
     const {
       id,
       name: name,
@@ -18,8 +17,6 @@ const AboutOfItem = (props) => {
       material: material,
       price: price,
     } = props.item;
-    console.log("OnButtonCLickRun");
-    console.log(button.target.textContent);
     context.onAdd(
       { id, name, from, material, price },
       button.target.textContent == "Add to favourites" ||

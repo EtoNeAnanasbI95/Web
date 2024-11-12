@@ -27,8 +27,6 @@ function App() {
     const getData = async () => {
       await api.get("/tables").then((res) => {
         setData(res.data);
-        console.log("data");
-        console.log(res.data);
       });
     };
     const getOverlay = async () => {
@@ -36,8 +34,6 @@ function App() {
         .get("/basket")
         .then((res) => {
           setBasket(res.data);
-          console.log("basket");
-          console.log(res.data);
         })
         .catch((error) => console.log(error));
     };
@@ -46,8 +42,6 @@ function App() {
         .get("/favourites")
         .then((res) => {
           setFavourites(res.data);
-          console.log("favourites");
-          console.log(res.data);
         })
         .catch((error) => console.log(error));
     };
@@ -81,8 +75,6 @@ function App() {
   };
 
   const isAdded = (id, direction) => {
-    console.log();
-    console.log("Go isAdded function, check is added to ", direction);
     const res =
       direction == "favourites"
         ? favourites.find((objIsAdded) => {
@@ -92,15 +84,10 @@ function App() {
             return Number(objIsAdded.id) === Number(id);
           });
     let total = res ? true : false;
-    console.log("Is Added?", total);
     return total;
   };
 
   const onAdd = (obj, direction) => {
-    console.log();
-    console.log("onAdd hendler");
-    console.log("curr dir", direction);
-    console.log("cur obj", obj);
     const currentObj =
       direction == "favourites" ? favourites : basket;
     const currentSetter =
@@ -109,8 +96,7 @@ function App() {
       if (currentObj.find((item) => Number(item.id) === Number(obj.id))) {
         deleteFrom(obj, direction.toLowerCase());
       } else {
-        console.log("go post");
-        axios.post(`https://notpineapples.zapto.org/${direction.toLowerCase()}`, obj);
+        api.post(`/${direction.toLowerCase()}`, obj);
         currentSetter([...currentObj, obj]);
       }
     } catch (Error) {
@@ -119,12 +105,9 @@ function App() {
   };
 
   const deleteFrom = (obj, direction) => {
-    console.log();
-    console.log("Go deleteFrom function, deleting from ", direction);
     const curretnObj = direction == "favourites" ? favourites : basket;
     const curretnSetter = direction == "favourites" ? setFavourites : setBasket;
-    console.log("go delete from", direction);
-    axios.delete(`https://notpineapples.zapto.org/${direction}/${obj.id}`);
+    api.delete(`/${direction}/${obj.id}`);
     curretnSetter(() =>
       curretnObj.filter((item) => Number(item.id) !== Number(obj.id))
     );

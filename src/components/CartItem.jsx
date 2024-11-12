@@ -16,16 +16,19 @@ const CartItem = (props) => {
 
   const onCheck = (e) => setIsChecked(e.target.checked);
   const onSearch = (e) => setSearch(e.target.value);
-  const onSelectedCategory = (e) => setSelectedCategory(e.target.value);
+  const onSelectedCategory = (e) => {
+    console.log(props.data);
+    console.log(e.target.value);
+    setSelectedCategory(e.target.value);
+  }
 
   const filteredData = props.data.filter((item) =>
-    item.name.toLowerCase().includes(search.toLowerCase())
-  ).filter((item) => selectedCategory === "all" || selectedCategory === item.category);
+        item.name.toLowerCase().includes(search.toLowerCase())
+    ).filter((item) => selectedCategory === "all" || selectedCategory === item.category);
 
   let total = 0;
   let delay = 0;
 
-  console.log(props);
   return (
     <>
       {props.direction === "Basket" && props.data.length == 0 ? (
@@ -57,6 +60,7 @@ const CartItem = (props) => {
                 <Item
                   key={obj.id}
                   id={obj.id}
+                  category={obj.category}
                   direction={props.direction}
                   name={obj.name}
                   from={obj.from}

@@ -4,8 +4,6 @@ import "../App.css";
 import Item from "./Item";
 
 const HomePage = (props) => {
-  console.log("Home page props log");
-  console.log(props);
   const items = props.data.slice(0, 10);
   let delay = 0;
 

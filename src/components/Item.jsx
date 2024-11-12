@@ -12,18 +12,16 @@ const Item = (props) => {
   const context = React.useContext(AppContexet);
 
   const onClickAdd = (button) => {
-    console.log();
     const {
       id,
+      category: category,
       name: name,
       from: from,
       material: material,
       price: price,
     } = props;
-    console.log("OnButtonCLickRun");
-    console.log(button.target.textContent);
     context.onAdd(
-      { id, name, from, material, price },
+      { id, category, name, from, material, price },
       button.target.textContent == "Add to favourites" ||
         button.target.textContent == "Remove from favourites" ||
         button.target.textContent == "Added to favourites"
@@ -33,10 +31,9 @@ const Item = (props) => {
   };
 
   const onAboutClick = () => {
-    console.log("onAboutClickRun");
     context.setAboutItam(props.obj)
     return (
-      navigate('/AboutOf')
+      navigate('/Web/AboutOf')
     )
   }
 
