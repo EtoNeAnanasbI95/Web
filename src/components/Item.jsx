@@ -33,7 +33,7 @@ const Item = (props) => {
   const onAboutClick = () => {
     context.setAboutItam(props.obj)
     return (
-      navigate('/Web/AboutOf')
+      navigate('/AboutOf')
     )
   }
 
@@ -42,7 +42,7 @@ const Item = (props) => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: props.delay  }}   
+        transition={{ duration: 0.5, delay: props.delay  }}
       >
         <Card style={{ width: "18rem" }}>
           <Card.Body>
@@ -65,7 +65,7 @@ const Item = (props) => {
                       : context.isAdded(props.id, "favourites")
                       ? "Added to favourites"
                       : "Add to favourites"}
-                  </Button>  
+                  </Button>
                 </motion.div>
                 <motion.div whileTap="bounce" whileHover="pressed" initial='rest' variants={context.animations}>
                   <Button
